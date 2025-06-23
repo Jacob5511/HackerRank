@@ -1,6 +1,6 @@
 palindromes = set()
 for i in range(100, 1000):
-    for j in range(i, 1000):  # avoid duplicate pairs (i * j == j * i)
+    for j in range(i, 1000):
         product = i * j
         if str(product) == str(product)[::-1]:
             palindromes.add(product)
