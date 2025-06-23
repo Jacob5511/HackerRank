@@ -8,7 +8,7 @@ for _ in range(t):
     for i in range(n - k + 1):
         digits = num[i:i+k]
         if '0' in digits:
-            continue  # skip segments with zero
+            continue
         product = 1
         for d in digits:
             product *= int(d)
