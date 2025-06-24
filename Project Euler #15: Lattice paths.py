@@ -28,7 +28,6 @@ def nCr(n, r, fact, inv_fact):
         return 0
     return fact[n] * inv_fact[r] % MOD * inv_fact[n - r] % MOD
 
-# Input
 t = int(input())
 m_values = []
 n_values = []
@@ -40,9 +39,7 @@ for _ in range(t):
     n_values.append(n)
     max_sum = max(max_sum, m + n)
 
-# Precompute factorials
 fact, inv_fact = precompute_factorials(max_sum)
 
-# Process each test case
 for m, n in zip(m_values, n_values):
     print(nCr(m + n, m, fact, inv_fact))
